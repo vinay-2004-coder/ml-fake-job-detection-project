@@ -4,6 +4,7 @@
 A machine learning project that identifies fraudulent job postings using NLP, data cleaning, and a Random Forest classifier.
 
 📁 Repository: ml-fake-job-detection-project
+
 📌 Project Overview
 
 Fake job posts have become increasingly common on job portals. This project builds a predictive model that analyzes job descriptions and metadata to classify whether a job posting is real or fraudulent.
