@@ -1,141 +1,138 @@
-# ml-fake-job-detection-project
-🌐 Fake Job Detection using Machine Learning
+# 🌐 Fake Job Detection using Machine Learning
 
 A machine learning project that identifies fraudulent job postings using NLP, data cleaning, and a Random Forest classifier.
 
-📁 Repository: ml-fake-job-detection-project
+---
 
-📌 Project Overview
+## 📁 Repository
+**ml-fake-job-detection-project**
 
-Fake job posts have become increasingly common on job portals. This project builds a predictive model that analyzes job descriptions and metadata to classify whether a job posting is real or fraudulent.
+---
 
-This model can help job seekers, HR platforms, and researchers understand the patterns behind fake job listings.
+## 📌 Project Overview
 
-📂 Dataset
+Fake job posts are increasing across job portals.  
+This project analyzes job descriptions and metadata to classify whether a job post is **real or fraudulent**.
 
-The dataset used is the Real/Fake Job Posting Dataset from Kaggle.
+It helps:
+- Job seekers avoid scams  
+- HR platforms flag suspicious postings  
+- Researchers study fraud patterns  
 
-Features include:
+---
 
-Job title, location
+## 📂 Dataset
 
-Department, salary range
+Dataset used: **Real/Fake Job Posting Dataset (Kaggle)**
 
-Company profile
+🔗 **Dataset is available here:**  
+https://drive.google.com/drive/folders/10oAbFEyOf_fF8ZeHnFJ3w69fryncmkAM?usp=sharing
 
-Job description, requirements
+**Features include:**
+- Job title  
+- Location & department  
+- Salary range  
+- Company profile  
+- Job description  
+- Requirements  
+- Benefits  
+- Telecommuting, employment type  
+- Target: `fraudulent` (0 = Real, 1 = Fake)
 
-Telecommuting, employment type, benefits
+---
 
-Fraudulent label (0 = Real, 1 = Fake)
+## 🧹 Data Preprocessing
 
-🧹 Data Preprocessing
+Steps performed:
+- Removed irrelevant/unstructured columns  
+- Cleaned missing values  
+- Merged text fields  
+- Lowercased all text  
+- Removed punctuation & stopwords  
+- Tokenization + Lemmatization  
+- TF-IDF vectorization  
+- Handled class imbalance  
+- Train-test split (80/20)
 
-Key preprocessing steps performed:
+---
 
-Removed irrelevant/unstructured columns
+## 🤖 Model Used — Random Forest Classifier
 
-Cleaned null values
+**Why Random Forest?**
+- Works well with high-dimensional text data  
+- Reduces overfitting  
+- High accuracy on classification tasks  
+- Handles nonlinear patterns  
 
-Combined text fields where required
+---
 
-Lowercased text
+## 📊 Model Performance
 
-Removed punctuation, stopwords
+### ✔ Confusion Matrix
+[[5103 2]
+[ 159 100]]
 
-Tokenization & Lemmatization
 
-TF-IDF vectorization for text fields
 
-Handled class imbalance if present
+### ✔ Interpretation
+- **True Negatives (5103)** → Real jobs correctly identified  
+- **False Positives (2)** → Real jobs incorrectly marked as fake  
+- **False Negatives (159)** → Fake jobs predicted as real  
+- **True Positives (100)** → Fake jobs correctly detected  
 
-Train-test split (80/20)
+### ✔ Meaning
+- Excellent performance on real job detection  
+- Harder to detect fake jobs → class imbalance issue  
+- Still captures key fraud patterns well  
 
-🤖 Model Used: Random Forest Classifier
+---
 
-Random Forest was chosen because:
+## 📈 Metrics
+(Replace with your actual values)
 
-Works well with high-dimensional text data
+- **Accuracy:** ~95%  
+- **Precision:** High for class 0  
+- **Recall:** Lower for fake jobs  
+- **F1-Score:** Balanced  
 
-Reduces overfitting via multiple decision trees
+---
 
-Good accuracy on classification problems
-
-Handles non-linear patterns
-
-📊 Model Performance
-✔ Confusion Matrix (Example)
-[[5103     2]
- [ 159   100]]
-
-✔ Interpretation:
-
-True Negatives (5103): Real jobs correctly identified as real
-
-False Positives (2): Real jobs incorrectly predicted as fake
-
-False Negatives (159): Fake jobs wrongly predicted as real
-
-True Positives (100): Fake jobs correctly identified as fake
-
-✔ Meaning:
-
-The model is very good at detecting real jobs
-
-It struggles more with detecting fake jobs, because fake listings are rare → dataset imbalance
-
-Still, the model successfully identifies patterns of fraudulent postings
-
-📈 Metrics
-
-(Replace with your actual values if needed)
-
-Accuracy: ~95%
-
-Precision: High for class 0
-
-Recall: Lower for fake class
-
-F1-score: Balanced
-
-🏗 Project Structure
+## 🏗 Project Structure
 ml-fake-job-detection-project/
-│── dataset/
-│     └── fake_job_postings.csv
+│──G-Drive Link (dataset) - https://drive.google.com/drive/folders/10oAbFEyOf_fF8ZeHnFJ3w69fryncmkAM?usp=sharing
 │── notebooks/
-│     └── fake_job_detection.ipynb
+│ └── fake_job_detection.ipynb
 │── README.md
 
-▶️ How to Run the Project
-1️⃣ Clone the repo
+---
+
+## ▶️ How to Run the Project
+
+### 1️⃣ Clone the repo
+```bash
 git clone https://github.com/<your-username>/ml-fake-job-detection-project.git
 cd ml-fake-job-detection-project
-
-2️⃣ Install requirements
+2️⃣ Install dependencies
+bash
+Copy code
 pip install -r requirements.txt
-
 3️⃣ Run the notebook
-
-Open Jupyter Notebook:
-
+bash
+Copy code
 jupyter notebook
-
-
-Run fake_job_detection.ipynb
+Open fake_job_detection.ipynb
 
 🚀 Future Improvements
+Use BERT / Transformer-based embeddings
 
-Use BERT embeddings for better text understanding
+Apply SMOTE for class imbalance
 
-Handle class imbalance with SMOTE
+Deploy using Flask / FastAPI
 
-Deploy model with Flask / FastAPI
+Build a prediction dashboard
 
-Add a frontend dashboard
-
-Create real-time prediction API
+Add interactive data visualizations
 
 📝 Author
-
 Vinay N.
 Machine Learning & Data Science Enthusiast
