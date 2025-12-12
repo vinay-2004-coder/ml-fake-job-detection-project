@@ -99,14 +99,11 @@ F1-score: Balanced
 
 🏗 Project Structure
 ml-fake-job-detection-project/
-│── data/
-│   └── fake_job_postings.csv
-│── models/
-│   └── random_forest.pkl
-│── notebook/
-│   └── fake_job_detection.ipynb
+│── dataset/
+│     └── fake_job_postings.csv
+│── notebooks/
+│     └── fake_job_detection.ipynb
 │── README.md
-│── requirements.txt
 
 ▶️ How to Run the Project
 1️⃣ Clone the repo
